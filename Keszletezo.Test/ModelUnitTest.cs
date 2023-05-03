@@ -23,7 +23,16 @@ namespace Test
                     var values = line.Split(sep);
                     Adat a = new Adat()
                     {
-
+                        bvin = values[0],
+                        ProductBvin = values[1],
+                        VariantId = values[2],
+                        QuantityOnHand = Convert.ToInt32(values[3]),
+                        QuantityReserved = Convert.ToInt32(values[4]),
+                        QuantityAvailableForSale = Convert.ToInt32(values[5]),
+                        LowStockPoint = Convert.ToInt32(values[6]),
+                        LastUpdated = Convert.ToDateTime(values[7]),
+                        StoreId = Convert.ToInt64(values[8]),
+                        OutOfStockPoint = Convert.ToInt32(values[9])
                     };
                     adatok.Add(a);
                 }
