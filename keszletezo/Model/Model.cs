@@ -3,7 +3,7 @@
     public class Model
     {
 
-        public void kisebbmintot(List<Adat> adatok)
+        public string kisebbmintot(List<Adat> adatok)
         {
             //CSV
             //YYYYMMDD_{sorszam}.csv

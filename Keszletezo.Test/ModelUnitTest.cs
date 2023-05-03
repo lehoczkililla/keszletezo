@@ -9,13 +9,12 @@ namespace Test
     public class ModelTest
     {
         Model model;
-        string path = "";
         string sep = ";";
 
-        private List<Adat> getDataFromCsv(int sorszam = 0)
+        private List<Adat> getDataFromCsv(string path)
         {
             List<Adat> adatok = new List<Adat>();
-            using (var reader = new StreamReader(path + DateTime.Now.ToString("yyyyMMdd") + "_" + sorszam + ".csv"))
+            using (var reader = new StreamReader(path))
             {
                 while (!reader.EndOfStream)
                 {
@@ -44,8 +43,8 @@ namespace Test
         public void Empty_Test()
         {
             model = new Model();
-            model.kisebbmintot(new List<Adat>());
-            var result = getDataFromCsv();
+            string csvpath = model.kisebbmintot(new List<Adat>());
+            var result = getDataFromCsv(csvpath);
             Assert.Empty(result);
         }
 
@@ -147,8 +146,8 @@ namespace Test
         };
 
             model = new Model();
-            model.kisebbmintot(input);
-            var result = getDataFromCsv();
+            string csvpath  = model.kisebbmintot(input);
+            var result = getDataFromCsv(csvpath);
             Assert.Equal(output.Count, result.Count);
             for (int i = 0; i < output.Count; i++)
             {
@@ -201,8 +200,8 @@ namespace Test
         };
 
             model = new Model();
-            model.kisebbmintot(input);
-            var result = getDataFromCsv();
+            string csvpath = model.kisebbmintot(input);
+            var result = getDataFromCsv(csvpath);
             Assert.Equal(input.Count, result.Count);
             for (int i = 0; i < input.Count; i++)
             {
@@ -255,8 +254,8 @@ namespace Test
             };
 
             model = new Model();
-            model.kisebbmintot(input);
-            var result = getDataFromCsv();
+            string csvpath = model.kisebbmintot(input);
+            var result = getDataFromCsv(csvpath);
             Assert.Empty(result);
 
         }
@@ -462,11 +461,11 @@ namespace Test
             };
 
             model = new Model();
-            model.kisebbmintot(input1);
-            model.kisebbmintot(input2);
+            string csvpath1 = model.kisebbmintot(input1);
+            string csvpath2 = model.kisebbmintot(input2);
 
 
-            var result = getDataFromCsv();
+            var result = getDataFromCsv(csvpath1);
             Assert.Equal(output1.Count, result.Count);
             for (int i = 0; i < output1.Count; i++)
             {
@@ -474,7 +473,7 @@ namespace Test
                 Assert.Contains(result[i], output1);
             }
 
-            result = getDataFromCsv(1);
+            result = getDataFromCsv(csvpath2);
             Assert.Equal(output2.Count, result.Count);
             for (int i = 0; i < output2.Count; i++)
             {
