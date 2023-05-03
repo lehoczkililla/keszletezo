@@ -8,6 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
+    <Reference Include="Hotcakes.CommerceDTO">
+		<HintPath>.\References\Hotcakes.CommerceDTO.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+	
+  <ItemGroup>
+    <Folder Include="References\" />
   </ItemGroup>
 
 </Project>
