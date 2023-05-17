@@ -1,4 +1,7 @@
-﻿namespace keszletezo.Model
+﻿using System;
+using System.Collections.Generic;
+
+namespace keszletezo.Model
 {
     public class Model
     {

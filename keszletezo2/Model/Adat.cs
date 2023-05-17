@@ -1,4 +1,6 @@
-﻿namespace keszletezo.Model
+﻿using System;
+
+namespace keszletezo.Model
 {
     public struct Adat
     {

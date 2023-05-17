@@ -13,6 +13,7 @@ namespace keszletezo2
 {
     public partial class Form1 : Form
     {
+        
         public Form1()
         {
             InitializeComponent();
@@ -21,6 +22,18 @@ namespace keszletezo2
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void letoltes_Click(object sender, EventArgs e)
+        {
+            Hova hova = new Hova();
+            hova.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            TablazatForm tablazatForm = new TablazatForm();
+            tablazatForm.Show();
         }
     }
 }

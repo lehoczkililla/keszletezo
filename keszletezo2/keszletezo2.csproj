@@ -58,12 +58,27 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hova.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Hova.Designer.cs">
+      <DependentUpon>Hova.cs</DependentUpon>
+    </Compile>
     <Compile Include="Model\Adat.cs" />
     <Compile Include="Model\Model.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TablazatForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TablazatForm.Designer.cs">
+      <DependentUpon>TablazatForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Hova.resx">
+      <DependentUpon>Hova.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -74,6 +89,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="TablazatForm.resx">
+      <DependentUpon>TablazatForm.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
