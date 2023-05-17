@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32126.317
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "keszletezo", "keszletezo\keszletezo.csproj", "{6B404E41-2484-49F7-AA74-1B9C999D5A35}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "keszletezo", "keszletezo\keszletezo.csproj", "{6B404E41-2484-49F7-AA74-1B9C999D5A35}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Keszletezo.Test", "Keszletezo.Test\Keszletezo.Test.csproj", "{09455EB7-86F9-49C0-8D73-E9E31965BEF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Keszletezo.Test", "Keszletezo.Test\Keszletezo.Test.csproj", "{09455EB7-86F9-49C0-8D73-E9E31965BEF6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "keszletezo2", "keszletezo2\keszletezo2.csproj", "{0C406C89-46DF-4E24-82CF-4AEFC3464158}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{09455EB7-86F9-49C0-8D73-E9E31965BEF6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{09455EB7-86F9-49C0-8D73-E9E31965BEF6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{09455EB7-86F9-49C0-8D73-E9E31965BEF6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C406C89-46DF-4E24-82CF-4AEFC3464158}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C406C89-46DF-4E24-82CF-4AEFC3464158}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C406C89-46DF-4E24-82CF-4AEFC3464158}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C406C89-46DF-4E24-82CF-4AEFC3464158}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
