@@ -32,7 +32,9 @@
             this.letoltes = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
-            this.label2 = new System.Windows.Forms.Label();
+            this.kesz = new System.Windows.Forms.Label();
+            this.resultLabel = new System.Windows.Forms.Label();
+            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -69,29 +71,49 @@
             // 
             // progressBar1
             // 
-            this.progressBar1.Location = new System.Drawing.Point(12, 186);
+            this.progressBar1.Location = new System.Drawing.Point(12, 189);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(369, 42);
+            this.progressBar1.Size = new System.Drawing.Size(284, 42);
+            this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 3;
             this.progressBar1.Visible = false;
             // 
-            // label2
+            // kesz
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.label2.Location = new System.Drawing.Point(139, 256);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(103, 29);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Letöltve!";
-            this.label2.Visible = false;
+            this.kesz.AutoSize = true;
+            this.kesz.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.kesz.Location = new System.Drawing.Point(141, 245);
+            this.kesz.Name = "kesz";
+            this.kesz.Size = new System.Drawing.Size(103, 29);
+            this.kesz.TabIndex = 4;
+            this.kesz.Text = "Letöltve!";
+            this.kesz.Visible = false;
+            // 
+            // resultLabel
+            // 
+            this.resultLabel.AutoSize = true;
+            this.resultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.resultLabel.Location = new System.Drawing.Point(305, 189);
+            this.resultLabel.Name = "resultLabel";
+            this.resultLabel.Size = new System.Drawing.Size(48, 29);
+            this.resultLabel.TabIndex = 5;
+            this.resultLabel.Text = "0%";
+            this.resultLabel.Visible = false;
+            // 
+            // backgroundWorker1
+            // 
+            this.backgroundWorker1.WorkerReportsProgress = true;
+            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
+            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
+            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(394, 314);
-            this.Controls.Add(this.label2);
+            this.ClientSize = new System.Drawing.Size(388, 286);
+            this.Controls.Add(this.resultLabel);
+            this.Controls.Add(this.kesz);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.letoltes);
@@ -110,7 +132,9 @@
         private System.Windows.Forms.Button letoltes;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar progressBar1;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label kesz;
+        private System.Windows.Forms.Label resultLabel;
+        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

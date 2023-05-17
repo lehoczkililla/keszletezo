@@ -32,26 +32,14 @@ namespace keszletezo2
             Hova hova = new Hova();
             if (hova.ShowDialog() == DialogResult.OK)
             {
-                Api proxy = apiHivas();
-                var file = @"C:\Users\dbczr\Desktop\4_félév\Rendszerfejlesztés\Outputs\myOutput.csv";
-                using (var stream = File.CreateText(file))
-                {
 
-                    for (var i = 0; i < 178; i++)
-                    {
-                        string inventoryId = inventory[i];
-                        var inv = proxy.ProductInventoryFind(inventoryId);
-                        if (inv.Content.QuantityOnHand < 5)
-                        {
-                            string first = inv.Content.ProductBvin.ToString();
-                            string second = inv.Content.QuantityOnHand.ToString();
-                            string csvRow = string.Format("{0};{1}", first, second);
-                            stream.WriteLine(csvRow);
-                        }
-                            
-                    }
+                if (backgroundWorker1.IsBusy != true)
+                {
+                    progressBar1.Visible = true;
+                    resultLabel.Visible = true;
+                    // Start the asynchronous operation.
+                    backgroundWorker1.RunWorkerAsync();
                 }
-                MessageBox.Show("Sikeresen letöltötted a file-t. Mostmár bezárhatod a programot!");
 
             }
         }
@@ -255,6 +243,45 @@ namespace keszletezo2
                             "d8795d6d-6ccb-4e2a-ac54-4172897e5d24",
                             "3da60b6a-69be-4770-9b5e-6ae42a16d6b7" 
         };
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            BackgroundWorker worker = sender as BackgroundWorker;
+
+            Api proxy = apiHivas();
+            var file = @"C:\Users\dbczr\Desktop\4_félév\Rendszerfejlesztés\Outputs\myOutput.csv";
+            using (var stream = File.CreateText(file))
+            {
+
+                for (int i = 0; i < 178; i++)
+                {
+                    string inventoryId = inventory[i];
+                    var inv = proxy.ProductInventoryFind(inventoryId);
+                    if (inv.Content.QuantityOnHand < 5)
+                    {
+                        string first = inv.Content.ProductBvin.ToString();
+                        string second = inv.Content.QuantityOnHand.ToString();
+                        string csvRow = string.Format("{0};{1}", first, second);
+                        stream.WriteLine(csvRow);
+                    }
+
+                    worker.ReportProgress(Convert.ToInt32((i+1)*100/178));
+                    
+
+                }
+            }
+        }
+
+        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            resultLabel.Text = e.ProgressPercentage.ToString() + "%";
+            progressBar1.Value = e.ProgressPercentage;
+        }
+
+        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            kesz.Visible = true;
+        }
     }
 }
 

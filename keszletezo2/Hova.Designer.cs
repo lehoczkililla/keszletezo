@@ -115,10 +115,10 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button ok;
         private System.Windows.Forms.Button megse;
         private System.Windows.Forms.ErrorProvider errorProvider1;
         private System.Windows.Forms.Label label2;
         public System.Windows.Forms.TextBox pathBox;
+        public System.Windows.Forms.Button ok;
     }
 }
