@@ -73,6 +73,7 @@
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(369, 42);
             this.progressBar1.TabIndex = 3;
+            this.progressBar1.Visible = false;
             // 
             // label2
             // 
@@ -83,6 +84,7 @@
             this.label2.Size = new System.Drawing.Size(103, 29);
             this.label2.TabIndex = 4;
             this.label2.Text = "Letöltve!";
+            this.label2.Visible = false;
             // 
             // Form1
             // 

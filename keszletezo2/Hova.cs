@@ -16,5 +16,38 @@ namespace keszletezo2
         {
             InitializeComponent();
         }
+
+        private void pathBox_Validating(object sender, CancelEventArgs e)
+        {
+            //nézzük meg, hogy megadták-e az elérési utat
+            if (!ellenoriz(pathBox.Text))
+            {
+                e.Cancel = true;
+                // ha nem, írjuk ki a hibát
+                errorProvider1.SetError(pathBox, "Kérem adja meg az elérési utat!");
+            }
+        }
+
+        private void pathBox_Validated(object sender, EventArgs e)
+        {
+            //ha igen, állítsuk vissza, hogy ne legyen hibaüzenet
+            errorProvider1.SetError(pathBox, "");
+
+            
+        }
+
+        private bool ellenoriz(string path)
+        {
+            return !string.IsNullOrEmpty(path);
+        }
+
+        private void ok_Click(object sender, EventArgs e)
+        {
+            if (this.ValidateChildren())
+            {
+                this.DialogResult = DialogResult.OK;
+                this.Close();
+            }
+        }
     }
 }
