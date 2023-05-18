@@ -33,8 +33,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.progressBar1 = new System.Windows.Forms.ProgressBar();
             this.kesz = new System.Windows.Forms.Label();
-            this.resultLabel = new System.Windows.Forms.Label();
-            this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.SuspendLayout();
             // 
             // label1
@@ -73,7 +71,7 @@
             // 
             this.progressBar1.Location = new System.Drawing.Point(12, 189);
             this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(284, 42);
+            this.progressBar1.Size = new System.Drawing.Size(364, 42);
             this.progressBar1.Step = 1;
             this.progressBar1.TabIndex = 3;
             this.progressBar1.Visible = false;
@@ -89,30 +87,11 @@
             this.kesz.Text = "Letöltve!";
             this.kesz.Visible = false;
             // 
-            // resultLabel
-            // 
-            this.resultLabel.AutoSize = true;
-            this.resultLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.resultLabel.Location = new System.Drawing.Point(305, 189);
-            this.resultLabel.Name = "resultLabel";
-            this.resultLabel.Size = new System.Drawing.Size(48, 29);
-            this.resultLabel.TabIndex = 5;
-            this.resultLabel.Text = "0%";
-            this.resultLabel.Visible = false;
-            // 
-            // backgroundWorker1
-            // 
-            this.backgroundWorker1.WorkerReportsProgress = true;
-            this.backgroundWorker1.DoWork += new System.ComponentModel.DoWorkEventHandler(this.backgroundWorker1_DoWork);
-            this.backgroundWorker1.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.backgroundWorker1_ProgressChanged);
-            this.backgroundWorker1.RunWorkerCompleted += new System.ComponentModel.RunWorkerCompletedEventHandler(this.backgroundWorker1_RunWorkerCompleted);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(388, 286);
-            this.Controls.Add(this.resultLabel);
             this.Controls.Add(this.kesz);
             this.Controls.Add(this.progressBar1);
             this.Controls.Add(this.button1);
@@ -120,7 +99,6 @@
             this.Controls.Add(this.label1);
             this.Name = "Form1";
             this.Text = "Készletező";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -133,8 +111,6 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ProgressBar progressBar1;
         private System.Windows.Forms.Label kesz;
-        private System.Windows.Forms.Label resultLabel;
-        private System.ComponentModel.BackgroundWorker backgroundWorker1;
     }
 }
 

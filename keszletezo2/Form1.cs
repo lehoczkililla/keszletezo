@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using Hotcakes.CommerceDTO.v1.Client;
+using System;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using Hotcakes.CommerceDTO.v1;
-using Hotcakes.CommerceDTO.v1.Client;
-using Hotcakes.CommerceDTO.v1.Catalog;
 using System.IO;
+using System.Windows.Forms;
 
 namespace keszletezo2
 {
@@ -22,24 +14,45 @@ namespace keszletezo2
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void letoltes_Click(object sender, EventArgs e)
         {
             Hova hova = new Hova();
             if (hova.ShowDialog() == DialogResult.OK)
             {
 
-                if (backgroundWorker1.IsBusy != true)
+                progressBar1.Visible = true;
+
+                Api proxy = apiHivas();
+                string path = hova.pathBox.Text;
+                var file = path + "myOutput.csv";
+                //írjuk ki a fájlba
+                using (var stream = File.CreateText(file))
                 {
-                    progressBar1.Visible = true;
-                    resultLabel.Visible = true;
-                    // Start the asynchronous operation.
-                    backgroundWorker1.RunWorkerAsync();
+
+                    for (int i = 0; i < 178; i++)
+                    {
+                        string inventoryId = inventory[i];
+                        var inv = proxy.ProductInventoryFind(inventoryId);
+                        if (i == 0)
+                        {
+                            string fejlec = string.Format("{0};{1}", "Termékazonosító", "Mennyiség");
+                            stream.WriteLine(fejlec);
+                        }
+                        if (inv.Content.QuantityOnHand < 5)
+                        {
+                            string first = inv.Content.ProductBvin.ToString();
+                            string second = inv.Content.QuantityOnHand.ToString();
+                            string csvRow = string.Format("{0};{1}", first, second);
+                            stream.WriteLine(csvRow);
+                        }
+
+                        int progress = Convert.ToInt16((i + 1) * 100 / 178);
+                        progressBar1.Value = progress;
+
+                    }
+                    kesz.Visible = true;
                 }
+
 
             }
         }
@@ -241,47 +254,8 @@ namespace keszletezo2
                             "28ad0070-a3a9-4f4f-ba75-335cb143e25b",
                             "8544364d-bc28-4620-b66b-e5b1d327de87",
                             "d8795d6d-6ccb-4e2a-ac54-4172897e5d24",
-                            "3da60b6a-69be-4770-9b5e-6ae42a16d6b7" 
+                            "3da60b6a-69be-4770-9b5e-6ae42a16d6b7"
         };
-
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-            BackgroundWorker worker = sender as BackgroundWorker;
-
-            Api proxy = apiHivas();
-            var file = @"C:\Users\dbczr\Desktop\4_félév\Rendszerfejlesztés\Outputs\myOutput.csv";
-            using (var stream = File.CreateText(file))
-            {
-
-                for (int i = 0; i < 178; i++)
-                {
-                    string inventoryId = inventory[i];
-                    var inv = proxy.ProductInventoryFind(inventoryId);
-                    if (inv.Content.QuantityOnHand < 5)
-                    {
-                        string first = inv.Content.ProductBvin.ToString();
-                        string second = inv.Content.QuantityOnHand.ToString();
-                        string csvRow = string.Format("{0};{1}", first, second);
-                        stream.WriteLine(csvRow);
-                    }
-
-                    worker.ReportProgress(Convert.ToInt32((i+1)*100/178));
-                    
-
-                }
-            }
-        }
-
-        private void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
-        {
-            resultLabel.Text = e.ProgressPercentage.ToString() + "%";
-            progressBar1.Value = e.ProgressPercentage;
-        }
-
-        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            kesz.Visible = true;
-        }
     }
 }
 

@@ -17,7 +17,7 @@ namespace keszletezo2
             InitializeComponent();
         }
 
-        private void pathBox_Validating(object sender, CancelEventArgs e)
+        public void pathBox_Validating(object sender, CancelEventArgs e)
         {
             //nézzük meg, hogy megadták-e az elérési utat
             if (!ellenoriz(pathBox.Text))
@@ -28,13 +28,14 @@ namespace keszletezo2
             }
         }
 
-        private void pathBox_Validated(object sender, EventArgs e)
+        public void pathBox_Validated(object sender, EventArgs e)
         {
             //ha igen, állítsuk vissza, hogy ne legyen hibaüzenet
             errorProvider1.SetError(pathBox, "");
 
-            
+
         }
+
 
         private bool ellenoriz(string path)
         {

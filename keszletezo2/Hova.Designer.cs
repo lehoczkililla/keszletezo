@@ -92,7 +92,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(396, 40);
             this.label2.TabIndex = 4;
-            this.label2.Text = "Kérlek az elérési utat az alábbi formátumban add meg: \r\nC:Mappanév\\Mappanév\\";
+            this.label2.Text = "Kérlek az elérési utat az alábbi formátumban add meg: \r\nC:Mappanév/Mappanév/";
             // 
             // Hova
             // 
