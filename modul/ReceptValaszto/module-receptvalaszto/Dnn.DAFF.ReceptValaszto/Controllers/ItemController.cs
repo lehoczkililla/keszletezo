@@ -77,6 +77,13 @@ namespace DAFF.Modules.Dnn.DAFF.ReceptValaszto.Controllers
             return RedirectToDefaultRoute();
         }
 
+
+        public ActionResult Reszlet()
+        {
+            var receptek = ReceptManager.Instance.GetRecepts();
+            return Content("Hi there :)");
+        }
+
         [ModuleAction(ControlKey = "Edit", TitleKey = "AddItem")]
         public ActionResult Index()
         {
