@@ -9,38 +9,46 @@
     <h2>Az élet sütis oldala!</h2>
     <h6>Válaszd ki a receptet és rendeld meg a hozzávalókat!</h6>
     <div> Ez ilyen egyszerű!</div>
+    <fieldset>
+        <table>
+            <thead>
+                <tr>
+                    <th>Recept neve</th>
+                    <th>Recept leírása</th>
+                    <th>Hozzávalók</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Brownie</th>
+                    <th>Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.</th>
+                    <th>
+                        Tej,<br />cukor,<br /> tej, Liszt, keksz<br />
+                        <input type="text" class="sajattext" id="fname" name="fname">
+                        
+                        <a class="btn" href="@Url.Action("Index","Item")">KOSÁRBA RAKOM</a>
 
-    <table class="sajattb">
-        <thead>
-            <tr>
-                <th>Recept neve</th>
-                <th>Recept leírása</th>
-                <th>Hozzávalók</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th>Brownie</th>
-                <th>Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.</th>
-                <th>
-                    Tej,<br />cukor,<br /> tej, Liszt, keksz<br />
-                    <input type="text" class="sajattext"id="fname" name="fname">
-                    <a class="btn" id="elso" href="@Url.Action("Reszlet","Item")">KOSÁRBA RAKOM</a>
 
-                </th>
-            </tr>
-            <tr>
-                <th>Brownie</th>
-                <th>Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.</th>
-                <th>Só, cukor, tej, Liszt, keksz </th>
-            </tr>
-            <tr>
-                <th>Brownie</th>
-                <th>Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.</th>
-                <th>Só, cukor, tej, Liszt, keksz </th>
-            </tr>
-        </tbody>
-    </table>
+                    </th>
+                </tr>
+                <tr>
+                    <th>Brownie</th>
+                    <th>Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.</th>
+                    <th>Só, cukor, tej, Liszt, keksz </th>
+                </tr>
+                <tr>
+                    <th>Brownie</th>
+                    <th>Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.</th>
+                    <th>Só, cukor, tej, Liszt, keksz </th>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>
+
+
+
+
+
 
     @*@if (Model == null)
         {

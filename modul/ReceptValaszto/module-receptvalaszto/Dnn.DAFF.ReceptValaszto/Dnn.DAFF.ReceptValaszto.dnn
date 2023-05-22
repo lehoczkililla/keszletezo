@@ -52,7 +52,7 @@
                 <moduleControls>
                   <moduleControl>
                     <controlKey />
-                    <controlSrc>DAFF.Modules.Dnn.DAFF.ReceptValaszto.Controllers/Item/Index.mvc</controlSrc>
+                    <controlSrc>DAFF.Modules.Dnn.DAFF.ReceptValaszto.Controllers/Recept/Index.mvc</controlSrc>
                     <supportsPartialRendering>False</supportsPartialRendering>
                     <controlTitle />
                     <controlType>View</controlType>

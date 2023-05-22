@@ -15,4 +15,6 @@ namespace DAFF.Modules.Dnn.DAFF.ReceptValaszto.Models
         public string ReceptNev { get; set; }
         public string Leiras { get; set; }
     }
+
+    
 }

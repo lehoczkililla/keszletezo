@@ -18,13 +18,46 @@ using DotNetNuke.Web.Mvc.Framework.ActionFilters;
 using DotNetNuke.Web.Mvc.Framework.Controllers;
 using System;
 using System.Linq;
+using System.Text;
 using System.Web.Mvc;
+
 
 namespace DAFF.Modules.Dnn.DAFF.ReceptValaszto.Controllers
 {
     [DnnHandleError]
     public class ItemController : DnnController
     {
+        public ActionResult AddProductToCart(object sender, EventArgs e)
+        {
+
+            //// create a reference to the Hotcakes store
+            //var HccApp = HccAppHelper.InitHccApp();
+            //// get an instance of the product to add
+            //var p = HccApp.CatalogServices.Products.FindBySku("SAMPLE001");
+
+            //// set the quantity
+            //int qty = 1;
+
+            //// create a reference to the current shopping cart
+            //Order currentCart = HccApp.OrderServices.EnsureShoppingCart();
+
+            //// create a line item for the cart using the product
+            //LineItem li = HccApp.CatalogServices.ConvertProductToLineItem(p, new OptionSelections(), qty, HccApp);
+
+            //// add the line item to the current cart
+            //HccApp.AddToOrderWithCalculateAndSave(currentCart, li);
+
+            //// send the customer to the shopping cart page
+            //Response.Redirect(HccUrlBuilder.RouteHccUrl(HccRoute.Cart));
+
+            ////return View();
+
+
+
+            return Content("Hi there!");
+
+        }
+
 
         public ActionResult Delete(int itemId)
         {
@@ -78,17 +111,14 @@ namespace DAFF.Modules.Dnn.DAFF.ReceptValaszto.Controllers
         }
 
 
-        public ActionResult Reszlet()
-        {
-            var receptek = ReceptManager.Instance.GetRecepts();
-            return Content("Hi there :)");
-        }
-
         [ModuleAction(ControlKey = "Edit", TitleKey = "AddItem")]
         public ActionResult Index()
         {
             var items = ItemManager.Instance.GetItems(ModuleContext.ModuleId);
-            return View(items);
+            //return View(items);
+
+            return Content("Hiiiiii");
         }
+
     }
 }

@@ -15,14 +15,22 @@ namespace DAFF.Modules.Dnn.DAFF.ReceptValaszto.Controllers
         // GET: Recept
         public ActionResult Index()
         {
-           var receptek =  ReceptManager.Instance.GetRecepts();
-            return View(receptek);
+            //Recept recept = new Recept();
+            //recept.ReceptSK = 1;
+            //recept.ReceptNev = "Brownie";
+            //recept.Leiras = "Jóóóó";
+
+            var rec = ReceptManager.Instance.GetRecepts();
+            ViewBag.ReceptMicsoda = rec;
+            return View(rec);
         }
          
         // GET: Recept/Details/5
         public ActionResult Details(int id)
         {
-            return View();
+            var receptek = ReceptManager.Instance.GetRecept(id);
+
+            return View(receptek);
         }
 
         // GET: Recept/Create
