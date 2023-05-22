@@ -124,6 +124,7 @@
     </Compile>
     <Compile Include="Components\FeatureController.cs" />
     <Compile Include="Components\ItemManager.cs" />
+    <Compile Include="Components\ReceptManager.cs" />
     <Compile Include="Controllers\SettingsController.cs" />
     <Compile Include="Models\hcc_Product.cs" />
     <Compile Include="Models\Hozzavalo.cs" />

@@ -8,13 +8,24 @@
 /*****                                                  *****/
 /************************************************************/
 
-IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}{objectQualifier}Recept') AND type in (N'U'))
-DROP TABLE {databaseOwner}{objectQualifier}Recept
-GO
 
 IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}{objectQualifier}Hozzavalo') AND type in (N'U'))
 DROP TABLE {databaseOwner}{objectQualifier}Hozzavalo
 GO
+
+IF  EXISTS (SELECT * FROM sys.objects WHERE object_id = OBJECT_ID(N'{databaseOwner}{objectQualifier}Recept') AND type in (N'U'))
+DROP TABLE {databaseOwner}{objectQualifier}Recept
+GO
+
+
+CREATE TABLE {databaseOwner}{objectQualifier}Hozzavalo(
+	[HozzavaloSK] [int] PRIMARY KEY IDENTITY,
+	[HozzavaloNev] [nvarchar](100) NOT NULL,
+	[ReceptFK] [bigint] NOT NULL,
+	[ProductFK] [bigint] NOT NULL,
+ ) ON [PRIMARY]
+GO
+
 
 
 CREATE TABLE {databaseOwner}{objectQualifier}Recept (
@@ -25,34 +36,12 @@ CREATE TABLE {databaseOwner}{objectQualifier}Recept (
 GO
 
 
-CREATE TABLE {databaseOwner}{objectQualifier}Hozzavalo(
-	[HozzavaloSK] [int] PRIMARY KEY IDENTITY,
-	[HozzavaloNev] [nvarchar](100) NOT NULL,
-	[ReceptFK] [int] NOT NULL,
-	[ProductFK] [bigint] NOT NULL,
- ) ON [PRIMARY]
-GO
-
 
 ALTER TABLE {databaseOwner}{objectQualifier}Hozzavalo WITH NOCHECK ADD CONSTRAINT [FK_Hozzavalo_Recept] FOREIGN KEY ([ReceptFK])
     REFERENCES {databaseOwner}{objectQualifier}Recept ([ReceptSK])
     ON DELETE NO ACTION
 GO
 
-
-
-INSERT INTO Recept (ReceptSK, ReceptNev, Leiras)
-VALUES (1, 'Brownie', 'A legjobb recept egy kis sütéshez'),
-(2, 'Palacsinta', 'A legjobb recept, ha nincs időd'),
-(3, 'Puncstorta', 'PUNCH!'),
-GO
-
-INSERT INTO Hozzavalo (HozzavaloSK, HozzavaloNev, ProductFK)
-VALUES (1, 'Liszt', 3),
-(2, 'Cukor', 4),
-(3, 'Só', 6),
-(4, 'Vaj', 2)
-GO
 
 
 
