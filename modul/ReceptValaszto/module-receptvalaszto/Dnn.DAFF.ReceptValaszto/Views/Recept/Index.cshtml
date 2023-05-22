@@ -1,15 +1,32 @@
-﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<IEnumerable<DAFF.Modules.Dnn.DAFF.ReceptValaszto.Models.Recept>>
-
+﻿﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<IEnumerable<DAFF.Modules.Dnn.DAFF.ReceptValaszto.Models.Recept>>
+@Model DAFF.Modules.Dnn.DAFF.ReceptValaszto.Models.Recept;
 @using System.Text.RegularExpressions
 @using DotNetNuke.Web.Mvc.Helpers
 
+
 @{
     ViewBag.Title = "Index";
-
+    var rec = ViewBag.ReceptMicsoda;
 }
 
-<h2>Az élet sütis oldala!</h2>
-<h2>Válaszd ki a receptet és rendeld meg a hozzávalókat!</h2>
-<h2> Ez ilyen egyszerű!</h2>
-<div></div>
+<h2>A kedvenc receptjeink egy helyen!</h2>
+<fieldset>
+    <table class="sajattb">
+        <thead>
+            <tr>
+                <th>Recept neve</th>
+                <th>Recept leírása</th>
+                <th>Hozzávalók</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+            </tr>
+
+        </tbody>
+    </table>
+</fieldset>
+
+
+
 
