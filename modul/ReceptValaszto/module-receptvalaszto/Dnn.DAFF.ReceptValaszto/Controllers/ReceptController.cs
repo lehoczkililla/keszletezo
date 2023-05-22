@@ -98,5 +98,11 @@ namespace DAFF.Modules.Dnn.DAFF.ReceptValaszto.Controllers
                 return View();
             }
         }
+
+        [HttpPost]
+        public void Mennyit(string mennyit1)
+        {
+
+        }
     }
 }
