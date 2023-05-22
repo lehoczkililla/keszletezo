@@ -18,3 +18,13 @@ D:\DNN_dev\Dev\DesktopModules\Git\modul\bin\Dnn.DAFF.ReceptValaszto.dll.config
 D:\DNN_dev\Dev\DesktopModules\Git\modul\bin\Dnn.DAFF.ReceptValaszto.dll
 D:\DNN_dev\Dev\DesktopModules\Git\modul\bin\Dnn.DAFF.ReceptValaszto.pdb
 D:\DNN_dev\Dev\DesktopModules\Git\modul\ReceptValaszto\module-receptvalaszto\Dnn.DAFF.ReceptValaszto\obj\Debug\Dnn.DAFF.ReceptValaszto.csproj.CopyComplete
+D:\DNN_dev\Dev\DesktopModules\Git2\modul\bin\Dnn.DAFF.ReceptValaszto.dll.config
+D:\DNN_dev\Dev\DesktopModules\Git2\modul\bin\Dnn.DAFF.ReceptValaszto.dll
+D:\DNN_dev\Dev\DesktopModules\Git2\modul\bin\Dnn.DAFF.ReceptValaszto.pdb
+D:\DNN_dev\Dev\DesktopModules\Git2\modul\ReceptValaszto\module-receptvalaszto\Dnn.DAFF.ReceptValaszto\obj\Debug\Dnn.DAFF.ReceptValaszto.csproj.AssemblyReference.cache
+D:\DNN_dev\Dev\DesktopModules\Git2\modul\ReceptValaszto\module-receptvalaszto\Dnn.DAFF.ReceptValaszto\obj\Debug\DAFF.Modules.Dnn.DAFF.ReceptValaszto.App_LocalResources.Settings.resources
+D:\DNN_dev\Dev\DesktopModules\Git2\modul\ReceptValaszto\module-receptvalaszto\Dnn.DAFF.ReceptValaszto\obj\Debug\Dnn.DAFF.ReceptValaszto.csproj.GenerateResource.cache
+D:\DNN_dev\Dev\DesktopModules\Git2\modul\ReceptValaszto\module-receptvalaszto\Dnn.DAFF.ReceptValaszto\obj\Debug\Dnn.DAFF.ReceptValaszto.csproj.CoreCompileInputs.cache
+D:\DNN_dev\Dev\DesktopModules\Git2\modul\ReceptValaszto\module-receptvalaszto\Dnn.DAFF.ReceptValaszto\obj\Debug\Dnn.DAFF.ReceptValaszto.csproj.CopyComplete
+D:\DNN_dev\Dev\DesktopModules\Git2\modul\ReceptValaszto\module-receptvalaszto\Dnn.DAFF.ReceptValaszto\obj\Debug\Dnn.DAFF.ReceptValaszto.dll
+D:\DNN_dev\Dev\DesktopModules\Git2\modul\ReceptValaszto\module-receptvalaszto\Dnn.DAFF.ReceptValaszto\obj\Debug\Dnn.DAFF.ReceptValaszto.pdb

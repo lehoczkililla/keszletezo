@@ -17,65 +17,45 @@ DROP TABLE {databaseOwner}{objectQualifier}Hozzavalo
 GO
 
 
-
-CREATE TABLE {databaseOwner}{objectQualifier}Recept(
-	[ReceptSK] [bigint] IDENTITY(1,1) NOT NULL,
+CREATE TABLE {databaseOwner}{objectQualifier}Recept (
+	[ReceptSK] [bigint] PRIMARY KEY IDENTITY,
 	[ReceptNev] [nvarchar](200) NOT NULL,
-	[Leiras] [nvarchar](max) NULL,
- CONSTRAINT [PK_Recept] PRIMARY KEY CLUSTERED 
-(
-	[ReceptSK] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY] TEXTIMAGE_ON [PRIMARY]
+	[Leiras] [nvarchar](max)
+) ON [PRIMARY]
 GO
 
 
 CREATE TABLE {databaseOwner}{objectQualifier}Hozzavalo(
-	[HozzavaloSK] [int] IDENTITY(1,1) NOT NULL,
+	[HozzavaloSK] [int] PRIMARY KEY IDENTITY,
 	[HozzavaloNev] [nvarchar](100) NOT NULL,
 	[ReceptFK] [int] NOT NULL,
 	[ProductFK] [bigint] NOT NULL,
- CONSTRAINT [PK_Hozzavalo] PRIMARY KEY CLUSTERED 
-(
-	[HozzavaloSK] ASC
-)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
-) ON [PRIMARY]
-GO
-
-ALTER TABLE {databaseOwner}{objectQualifier}Hozzavalo  WITH CHECK ADD  CONSTRAINT [FK_Hozzavalo_hcc_Product] FOREIGN KEY([ProductFK])
-REFERENCES {databaseOwner}{objectQualifier}hcc_Product ([Id])
-GO
-
-ALTER TABLE {databaseOwner}{objectQualifier}Hozzavalo CHECK CONSTRAINT [FK_Hozzavalo_hcc_Product]
-GO
-
-ALTER TABLE {databaseOwner}{objectQualifier}Hozzavalo  WITH CHECK ADD  CONSTRAINT [FK_Hozzavalo_Recept] FOREIGN KEY([ProductFK])
-REFERENCES {databaseOwner}{objectQualifier}Recept ([ReceptSK])
-GO
-
-ALTER TABLE {databaseOwner}{objectQualifier}Hozzavalo CHECK CONSTRAINT [FK_Hozzavalo_Recept]
+ ) ON [PRIMARY]
 GO
 
 
-INSERT INTO [Recept] (
-	[ReceptNev], [Leiras]
-	) VALUES
-	('Recept1','Jó recept1'),
-	('Recept2','Jó recept2'),
-	('Recept3','Jó recept3'),;
+ALTER TABLE {databaseOwner}{objectQualifier}Hozzavalo WITH NOCHECK ADD CONSTRAINT [FK_Hozzavalo_Recept] FOREIGN KEY ([ReceptFK])
+    REFERENCES {databaseOwner}{objectQualifier}Recept ([ReceptSK])
+    ON DELETE NO ACTION
 GO
 
 
-INSERT INTO [Hozzavalo] (
-	[HozzavaloNev], [ReceptFK], [Product FK]
-	) VALUES
-	('Só', 1, 2),
-	('Cukor', 1, 3),
-	('Só', 2, 2 ),
-	('Liszt', 1, 4),
-	('Bors',2,5),
-	('Liszt',2,4);
+
+INSERT INTO Recept (ReceptSK, ReceptNev, Leiras)
+VALUES (1, 'Brownie', 'A legjobb recept egy kis sütéshez'),
+(2, 'Palacsinta', 'A legjobb recept, ha nincs időd'),
+(3, 'Puncstorta', 'PUNCH!'),
 GO
+
+INSERT INTO Hozzavalo (HozzavaloSK, HozzavaloNev, ProductFK)
+VALUES (1, 'Liszt', 3),
+(2, 'Cukor', 4),
+(3, 'Só', 6),
+(4, 'Vaj', 2)
+GO
+
+
+
 
 
 /************************************************************/
