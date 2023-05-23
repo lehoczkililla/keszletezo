@@ -21,15 +21,15 @@ GO
 CREATE TABLE {databaseOwner}{objectQualifier}Hozzavalo(
 	[HozzavaloSK] [int] PRIMARY KEY IDENTITY,
 	[HozzavaloNev] [nvarchar](100) NOT NULL,
-	[ReceptFK] [bigint] NOT NULL,
-	[ProductFK] [bigint] NOT NULL,
+	[ReceptFK] [int] NOT NULL,
+	[ProductFK] [int] NOT NULL,
  ) ON [PRIMARY]
 GO
 
 
 
 CREATE TABLE {databaseOwner}{objectQualifier}Recept (
-	[ReceptSK] [bigint] PRIMARY KEY IDENTITY,
+	[ReceptSK] [int] PRIMARY KEY IDENTITY,
 	[ReceptNev] [nvarchar](200) NOT NULL,
 	[Leiras] [nvarchar](max)
 ) ON [PRIMARY]
@@ -42,9 +42,10 @@ ALTER TABLE {databaseOwner}{objectQualifier}Hozzavalo WITH NOCHECK ADD CONSTRAIN
     ON DELETE NO ACTION
 GO
 
+INSERT INTO [Recept] (ReceptNev,Leiras)
+VALUES ('Brownie','Mindent egyszerre kell cisnálni'),('Nem Brownie','Finom étel finom falatok')
 
-
-
+GO
 
 
 /************************************************************/

@@ -1,33 +1,78 @@
-﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<IEnumerable< DAFF.Modules.Dnn.DAFF.ReceptValaszto.Models.Item >>
+﻿@inherits DotNetNuke.Web.Mvc.Framework.DnnWebViewPage<IEnumerable<DAFF.Modules.Dnn.DAFF.ReceptValaszto.Models.Item>>
+
 
 @using System.Text.RegularExpressions
 @using DotNetNuke.Web.Mvc.Helpers
 
 
 <div id="Items-@Dnn.ModuleContext.ModuleId">
-    @if (Model == null)
-    {
-        <p>@Dnn.LocalizeString("NoItems")</p>
-    }
-    else
-    {
-        <ul class="tm_tl">
-            @foreach (var item in Model)
-            {
-                <li class="tm_t">
-                    <h3>@item.ItemName</h3>
-                    <div class="tm_td">@item.ItemDescription</div>
-                    @{
-                        if (Dnn.ModuleContext.IsEditable)
-                        {
-                            <div>
-                                <a href="@Url.Action("Edit", "Item", new {ctl = "Edit", itemId = item.ItemId})">@Dnn.LocalizeString("EditItem")</a>
-                                <a href="@Url.Action("Delete", "Item", new {itemId = item.ItemId})">@Dnn.LocalizeString("DeleteItem")</a>
-                            </div>
+    <h2>Az élet sütis oldala!</h2>
+    <h6>Válaszd ki a receptet és rendeld meg a hozzávalókat!</h6>
+    <div> Ez ilyen egyszerű!</div>
+    @*<fieldset>
+        <table>
+            <thead>
+                <tr>
+                    <th>Recept neve</th>
+                    <th>Recept leírása</th>
+                    <th>Hozzávalók</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>Brownie</th>
+                    <th>Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.</th>
+                    <th>
+                        Tej,<br />cukor,<br /> tej, Liszt, keksz<br />
+                        <input type="text" class="sajattext" id="fname" name="fname">
+                        
+                        <a class="btn" href="@Url.Action("Index","Item")">KOSÁRBA RAKOM</a>
+
+
+                    </th>
+                </tr>
+                <tr>
+                    <th>Brownie</th>
+                    <th>Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.</th>
+                    <th>Só, cukor, tej, Liszt, keksz </th>
+                </tr>
+                <tr>
+                    <th>Brownie</th>
+                    <th>Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.Önts hozzá mindent és kész.</th>
+                    <th>Só, cukor, tej, Liszt, keksz </th>
+                </tr>
+            </tbody>
+        </table>
+    </fieldset>*@
+
+
+
+
+
+
+    @*@if (Model == null)
+        {
+            <p>@Dnn.LocalizeString("NoItems")</p>
+        }
+        else
+        {
+            <ul class="tm_tl">
+                @foreach (var item in Model)
+                {
+                    <li class="tm_t">
+                        <h3>@item.ItemName</h3>
+                        <div class="tm_td">@item.ItemDescription</div>
+                        @{
+                            if (Dnn.ModuleContext.IsEditable)
+                            {
+                                <div>
+                                    <a href="@Url.Action("Edit", "Item", new {ctl = "Edit", itemId = item.ItemId})">@Dnn.LocalizeString("EditItem")</a>
+                                    <a href="@Url.Action("Delete", "Item", new {itemId = item.ItemId})">@Dnn.LocalizeString("DeleteItem")</a>
+                                </div>
+                            }
                         }
-                    }
-                </li>
-            }
-        </ul>
-    }
+                    </li>
+                }
+            </ul>
+        }*@
 </div>
