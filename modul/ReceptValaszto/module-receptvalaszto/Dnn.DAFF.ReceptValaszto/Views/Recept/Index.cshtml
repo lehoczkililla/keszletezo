@@ -2,12 +2,17 @@
 @using System.Text.RegularExpressions
 @using DotNetNuke.Web.Mvc.Helpers
 @using DAFF.Modules.Dnn.DAFF.ReceptValaszto.Models;
+@using System.Web.Mvc;
+
+
 
 @{
     ViewBag.Title = "Index";
+    var hiba = "Sajnáljuk, de a szolgáltatás jelenleg nem elérhető!";
 }
 
 <h2>A kedvenc receptjeink egy helyen!</h2>
+<h2></h2>
 <fieldset>
     <table class="tabla">
         <thead>
@@ -43,12 +48,10 @@
                     <input type="number" name="mennyit1" id="mennyit1" min="0" value="0" max="10">Adag (Max. 10)
                     @*@Html.TextBox("mennyit1")*@
                     <br />
-                    <a class="kosarba1" type="submit" href="@Url.Action("Index","Item")">KOSÁRBA RAKOM</a>
-
-
+                    <a class="kosarba1" type="submit" href="@Url.Action("Index","Recept")">KOSÁRBA RAKOM</a>
+                    <br />@hiba
                 </th>
             </tr>
-
             <tr>
                 <th>Palacsinta</th>
                 <th class="receptleiras">

@@ -74,6 +74,7 @@ namespace DAFF.Modules.Dnn.DAFF.ReceptValaszto.Components
 
             var context = HccRequestContext.Current;
             var applic = HotcakesApplication.Current;
+           
 
             var p = applic.CatalogServices.Products.FindBySku("SAMPLE001");
 
