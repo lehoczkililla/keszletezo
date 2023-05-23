@@ -1,13 +1,9 @@
-btn {
+fieldset.btn {
     background-color: #FFC0CB;
         color: #622c24;
 
 }
-h2{
-    color: #ff00dc;
-}
-sajattb {
-    border: 5px solid;
+fieldset.table {
     margin-left: auto;
     margin-right: auto;
     width: 90%;
@@ -16,14 +12,13 @@ sajattb {
     border: 3px solid #ffae00;
     padding: 10px;
 }
-table td {
-    text-align: center;
-}
 
-table tr {
-    text-align: center;
-    vertical-align:top;
-}
-table th {
-    vertical-align: top;
-}
+    table td {
+        text-align: center;
+    }
+
+    table tr {
+        text-align: center;
+        vertical-align: center;
+    }
+

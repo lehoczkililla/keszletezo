@@ -7,11 +7,13 @@ using System.Web.Mvc;
 using DotNetNuke.Web.Mvc.Framework.ActionFilters;
 using DAFF.Modules.Dnn.DAFF.ReceptValaszto.Components;
 using DAFF.Modules.Dnn.DAFF.ReceptValaszto.Models;
+using Hotcakes.Commerce.Urls;
 
 namespace DAFF.Modules.Dnn.DAFF.ReceptValaszto.Controllers
 {
     public class ReceptController : DnnController
     {
+        
         // GET: Recept
         public ActionResult Index()
         {
