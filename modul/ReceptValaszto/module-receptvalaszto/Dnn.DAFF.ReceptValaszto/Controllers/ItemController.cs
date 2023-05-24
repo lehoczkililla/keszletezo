@@ -53,7 +53,7 @@ namespace DAFF.Modules.Dnn.DAFF.ReceptValaszto.Controllers
             ////return View();
 
 
-
+            
             return Content("Hi there!");
 
         }
@@ -114,10 +114,7 @@ namespace DAFF.Modules.Dnn.DAFF.ReceptValaszto.Controllers
         [ModuleAction(ControlKey = "Edit", TitleKey = "AddItem")]
         public ActionResult Index()
         {
-            var items = ItemManager.Instance.GetItems(ModuleContext.ModuleId);
-            //return View(items);
-
-            return Content("Hiiiiii");
+            return View();
         }
 
     }

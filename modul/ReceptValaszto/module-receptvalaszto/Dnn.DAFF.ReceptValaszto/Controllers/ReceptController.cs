@@ -137,12 +137,5 @@ namespace DAFF.Modules.Dnn.DAFF.ReceptValaszto.Controllers
             }
         }
 
-       
-
-        public ActionResult Hiba()
-        {
-            ViewBag.hibakod = "Sajnáljuk, de a szolgáltatás jelenleg nem elérhető!";
-            return View(ViewBag.hibakod);
-        }
     }
 }
