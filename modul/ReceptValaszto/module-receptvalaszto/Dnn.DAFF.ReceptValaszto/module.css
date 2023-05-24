@@ -1,24 +1,112 @@
-btn {
-    background-color: #FFC0CB;
-        color: #622c24;
 
-}
-table {
-    margin-left: auto;
-    margin-right: auto;
-    width: 90%;
-    border-collapse: collapse;
+/* ------------------- saját modul ------------------- */
+
+.modulcim {
+    font-size: 50px;
+    font-weight: bold;
     text-align: center;
-    border: 3px solid #ffae00;
-    padding: 10px;
 }
 
-    table td {
-        text-align: center;
+.tabla {
+    border: none;
+}
+
+    .tabla tbody th {
+        border-bottom: #FFFFFF solid 20px;
     }
 
-    table tr {
-        text-align: center;
-        vertical-align: center;
+    .tabla thead {
+        border-bottom: #FFFFFF solid 20px;
     }
+
+.oszlop1, .oszlop2, .oszlop3 {
+    padding: 10px;
+    background-color: #271E0F;
+    color: #FAF9F7;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 15px;
+}
+
+.recept {
+    vertical-align: top;
+    padding: 10px;
+    background-color: #FAF9F7;
+    border-right: #e7e7e7 solid 5px;
+    text-transform: uppercase;
+    font-family: 'Signika Negative', sans-serif;
+    color: #271E0F;
+    font-size: 15px;
+}
+
+.receptleiras {
+    vertical-align: top;
+    padding: 10px;
+    text-align: justify;
+    background-color: #FAF9F7;
+    font-family: 'Signika Negative', sans-serif;
+    color: #271E0F;
+    font-size: 15px;
+}
+
+.hozzavalok {
+    margin-top: 10px;
+    vertical-align: top;
+    padding: 10px;
+    background-color: #ead9c5;
+    font-family: 'Signika Negative', sans-serif;
+    color: #271E0F;
+    font-size: 15px;
+}
+
+    .hozzavalok a {
+        display: block;
+        background: #610B0F;
+        color: #FAF9F7;
+        text-align: center;
+        padding: 10px;
+        border-radius: 25px;
+        font-family: 'Signika Negative', sans-serif;
+        font-size: 15px;
+    }
+
+    .hozzavalok input {
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+.hibacim {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* --------------- fontos infók oldal ---------------- */
+
+.fontosinfo {
+    font-family: 'Dancing Script', cursive;
+    font-size: 25px;
+    line-height: 30px;
+}
+
+.aszfp, .adatvp, .szall-fizp, .termekvisszp, .gyikp, .csapatunkp, .allergenp {
+    font-size: 15px;
+    text-align: justify;
+}
+
+span .lista {
+    font-family: "Signika Negative", sans-serif;
+    line-height: 13px;
+}
+
+.tablazat td, .tablazat th {
+    padding: 10px;
+    font-size: 15px;
+    font-family: 'Signika Negative', sans-serif;
+    border: 1px solid black;
+}
+
+.tablazat {
+    border: 1px solid black;
+}
 
