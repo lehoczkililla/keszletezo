@@ -56,9 +56,7 @@ namespace DAFF.Modules.Dnn.DAFF.ReceptValaszto.Controllers
             //recept.ReceptNev = "Brownie";
             //recept.Leiras = "Jóóóó";
 
-            var rec = ReceptManager.Instance.GetRecepts();
-            ViewBag.ReceptMicsoda = rec;
-            return View(rec);
+            return View();
         }
          
         // GET: Recept/Details/5
