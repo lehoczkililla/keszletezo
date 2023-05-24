@@ -43,7 +43,22 @@ ALTER TABLE {databaseOwner}{objectQualifier}Hozzavalo WITH NOCHECK ADD CONSTRAIN
 GO
 
 INSERT INTO [Recept] (ReceptNev,Leiras)
-VALUES ('Brownie','Mindent egyszerre kell cisnálni'),('Nem Brownie','Finom étel finom falatok')
+VALUES ('Brownie','1. Fémtálban, gőzfürdő fölött, folyamatosan kevergetve megolvasztjuk a vajat és a csokit, amíg szép fényes krémet kapunk.
+2. A tálat levesszük a gőzről, majd egymás után hozzákeverjük a száraz anyagokat: a lisztet, a cukrot, a sütőport és a kakaót. 3. Egyenként hozzáadjuk tojásokat, és elkeverjük a csokis masszában.
+4. A kész tésztát 5 cm magas, kb. 25x25 cm-es vagy 18x30 cm-es tűzálló edénybe öntjük.
+5. A sütőt előmelegítjük 180 fokra, és alsó-felső sütésen, kb. 33-35 perc alatt megsütjük a süteményt. A tűpróbánál a beleszúrt hegyes eszközre még kissé rátapad a csokis massza, de ne süssük tovább.
+6. Kivesszük a sütőből, és hagyjuk a tespiben kihűlni, majd egy süteményestálra vegy vágódeszkára helyezve egyforma kockákra vágjuk.'),
+('Palacsinta','1. A palacsintatészta elkészítéséhez keverőtálba töltjük a tejet. Hozzáadjuk a tojást, az olajat, a csipet sót, és alaposan összekeverjük. Használhatunk hozzá robotgépet is.
+2. Hozzámérjük a lisztet, és sűrű, krémszerű tésztát keverünk belőle. Végül hozzáadjuk a szódát, vagy a szénsavas ásványvizet is.
+3. Nagyon fontos, hogy csomómentesre keverjük a palacsintatésztát. Sütés előtt pihentessük legalább 10-15 percet.
+4. Az első palacsinta sütése előtt a forró serpenyőbe egy kevés olajat öntünk (a következő palacsintáknál erre már nincs szükség, maximálisan elegendő, ami kisül a tésztából), és kisebb merőkanálnyi adagot öntünk rá a tésztából. Hagyjuk, elterülni a serpenyőben.
+5. A palacsintákat egyenként kisütjük mindkét oldalukon.
+6. Ízlés szerinti töltelékkel töltjük és feltekerjük, vagy hajtogatjuk. Megszórhatjuk porcukorral is, de nagyon jól illik hozzá a csokoládészósz és a vaníliasodó is.'),
+('Amerikai Süti','1. Keverjük össze a lisztet, a sütőport és a sót.
+2. A vajat habosítsuk ki a cukrokkal, majd adjuk hozzá a tojást és keverjük el benne.
+3. Végül keverjük bele a lisztkeveréket és fél pingponglabda nagyságúra adagoljuk ki egy sütőpapíros tepsire.
+4. 175 fokra előmelegített sütőben kb. 8-10 perc alatt süssük meg. Ha kihűltek a kekszek, rögtön ehetjük is. 
+5. Légmentesen lezárva el is tehetjük.')
 
 GO
 
