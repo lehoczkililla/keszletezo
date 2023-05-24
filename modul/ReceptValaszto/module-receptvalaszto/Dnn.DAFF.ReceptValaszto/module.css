@@ -1,5 +1,5 @@
 
-/* ------------------- saját modul ------------------- */
+/* ------------------- sajÃ¡t modul ------------------- */
 
 .modulcim {
     font-size: 50px;
@@ -79,34 +79,5 @@
     font-weight: bold;
     text-align: center;
     margin-top: 30px;
-}
-
-/* --------------- fontos infók oldal ---------------- */
-
-.fontosinfo {
-    font-family: 'Dancing Script', cursive;
-    font-size: 25px;
-    line-height: 30px;
-}
-
-.aszfp, .adatvp, .szall-fizp, .termekvisszp, .gyikp, .csapatunkp, .allergenp {
-    font-size: 15px;
-    text-align: justify;
-}
-
-span .lista {
-    font-family: "Signika Negative", sans-serif;
-    line-height: 13px;
-}
-
-.tablazat td, .tablazat th {
-    padding: 10px;
-    font-size: 15px;
-    font-family: 'Signika Negative', sans-serif;
-    border: 1px solid black;
-}
-
-.tablazat {
-    border: 1px solid black;
 }
 
