@@ -14,6 +14,7 @@ namespace keszletezo.Model
         public DateTime LastUpdated { get; set; }
         public long StoreId { get; set; }
         public int OutOfStockPoint { get; set; }
+        public String ProductName { get; set; }
 
     }
 }

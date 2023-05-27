@@ -990,6 +990,7 @@ namespace keszletezo2
             {
                 string inventoryId = inventory[i];
                 var inv = proxy.ProductInventoryFind(inventoryId);
+                var prod = proxy.ProductsFindAll();
                 if (inv.Content.QuantityOnHand < 5)
                 {
 
@@ -1005,6 +1006,13 @@ namespace keszletezo2
                     adat.LastUpdated = inv.Content.LastUpdated;
                     adat.StoreId = i; //ezt sem lehet lekérni
                     adat.OutOfStockPoint = inv.Content.OutOfStockPoint;
+                    for (int j = 0; j < 942; j++)
+                    {
+                        if (prod.Content[j].Bvin == inv.Content.ProductBvin)
+                        {
+                            adat.ProductName = prod.Content[j].ProductName;
+                        }
+                    }
 
                     inventoryData.Add(adat);
 
