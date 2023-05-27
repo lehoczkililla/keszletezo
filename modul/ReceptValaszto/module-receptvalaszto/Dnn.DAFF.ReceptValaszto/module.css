@@ -1,0 +1,83 @@
+
+/* ------------------- saját modul ------------------- */
+
+.modulcim {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.tabla {
+    border: none;
+}
+
+    .tabla tbody th {
+        border-bottom: #FFFFFF solid 20px;
+    }
+
+    .tabla thead {
+        border-bottom: #FFFFFF solid 20px;
+    }
+
+.oszlop1, .oszlop2, .oszlop3 {
+    padding: 10px;
+    background-color: #271E0F;
+    color: #FAF9F7;
+    font-family: 'Signika Negative', sans-serif;
+    font-size: 15px;
+}
+
+.recept {
+    vertical-align: top;
+    padding: 10px;
+    background-color: #FAF9F7;
+    border-right: #e7e7e7 solid 5px;
+    text-transform: uppercase;
+    font-family: 'Signika Negative', sans-serif;
+    color: #271E0F;
+    font-size: 15px;
+}
+
+.receptleiras {
+    vertical-align: top;
+    padding: 10px;
+    text-align: justify;
+    background-color: #FAF9F7;
+    font-family: 'Signika Negative', sans-serif;
+    color: #271E0F;
+    font-size: 15px;
+}
+
+.hozzavalok {
+    margin-top: 10px;
+    vertical-align: top;
+    padding: 10px;
+    background-color: #ead9c5;
+    font-family: 'Signika Negative', sans-serif;
+    color: #271E0F;
+    font-size: 15px;
+}
+
+    .hozzavalok a {
+        display: block;
+        background: #610B0F;
+        color: #FAF9F7;
+        text-align: center;
+        padding: 10px;
+        border-radius: 25px;
+        font-family: 'Signika Negative', sans-serif;
+        font-size: 15px;
+    }
+
+    .hozzavalok input {
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+.hibacim {
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 30px;
+}
+
