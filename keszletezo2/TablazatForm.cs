@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System;
 using Hotcakes.CommerceDTO.v1.Client;
 
 namespace keszletezo2
@@ -1011,6 +1010,7 @@ namespace keszletezo2
                         if (prod.Content[j].Bvin == inv.Content.ProductBvin)
                         {
                             adat.ProductName = prod.Content[j].ProductName;
+                            break;
                         }
                     }
 
